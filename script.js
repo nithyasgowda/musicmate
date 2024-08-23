@@ -2,9 +2,9 @@
 let songs = [
   {
     songName: "Aagodella Olledakke",
-    covers: "/covers/Aagodella_Olledakke.jpg",
+    covers: "./covers/Aagodella_Olledakke.jpg",
     singer: "All Ok",
-    url: "/songs/Aagodella Olledakke.mp3",
+    url: "./songs/Aagodella Olledakke.mp3",
   },
   {
     songName: "Nenne Tanaka",
