@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Playwrite+AR:wght@100..400&family=Smooch+Sans:wght@300&family=Teko&family=Vina+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald&family=Playwrite+AR:wght@100..400&family=Smooch+Sans:wght@300&family=Teko&family=Vina+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f6f5f5;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* ^ NAV BAR STARTS HERE -------------------------------- */
+
+nav {
+  background-color: white;
+  padding: 0.5% 3%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0px 3px 4px #dfdddd;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+nav ul #logoBlock a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#mmlogo {
+  height: 40px;
+}
+#mm {
+  font-family: "Playwrite AR", cursive;
+  font-weight: bolder;
+  color: #009fbd;
+  font-size: larger;
+  border-right: 10px double #009fbd;
+  border-radius: 50%;
+  padding-right: 15px;
+}
+nav ul li {
+  padding: 0 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 2px;
+}
+nav ul li .links:hover {
+  background-color: #009dbd48;
+  transition: 0.2s;
+}
+
+/* ^ PLAYLIST and TRACK INFORMATION STARTS HERE --------------------------- */
+#mainSection{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap:10px;
+    position: relative;
+}
+#mainSection #playList{
+    height: 95%;
+    width:100%;
+    background-color: #10373efd;
+    border-radius: 3px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#mainSection #playList.compress{
+    width: 70%;
+}
+#mainSection #playList .card{
+    height: 290px;
+    width:180px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    border-radius: 5px;
+    color:#f6f5f5;
+    margin: 0px 20px 20px;
+}
+#mainSection #playList .card:hover{
+    background-color: #f6f5f512;
+}
+#mainSection #playList .card .songcover{
+   position: relative;
+}
+#mainSection #playList .card .songcover img{
+    height: 170px;
+    width: 100%;
+    border-radius: 3px;
+}
+#mainSection #playList .card .songcover i{
+    height: 47px;
+    width: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    position: absolute;
+    top: 128px;
+    right: 10px;
+    font-size: 20px;
+    background-color: #08cbf2;
+    border-radius: 50%;
+    cursor: pointer;
+    visibility:hidden ;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#mainSection #playList .card:hover i{
+    visibility: visible;
+    top:113px;
+    opacity: 1;
+}
+#mainSection #playList .card .songcover i:hover{
+    background-color: #62dbf3;
+    transform: scale(1.15);
+    transition: all 0s;
+}
+#mainSection #playList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#mainSection #playList::-webkit-scrollbar-thumb {
+    background: #52a0af;
+}
+#mainSection #playList::-webkit-scrollbar-track {
+    background-color: #4a636bc0;
+}
+  
+#mainSection #trackInfo{
+    height: 95%;
+    width:30%;
+    border-radius: 3px;
+    background-image: linear-gradient(#025f7ed1,#084e65e6,#183139f6,#233439fd);
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    color:#f6f5f5;
+    position:absolute;
+    opacity: 0;
+    visibility: hidden;
+    right:10%;
+}
+#mainSection #trackInfo.slide{
+    visibility: visible;
+    opacity: 1;
+    right:0;
+    transition: all 0.5s;
+}
+#mainSection #trackInfo #trackCover{
+    height: 70%;
+    width: 100%;
+}
+#mainSection #trackInfo #trackCover img{
+    border-radius: 3px;
+}
+
+#mainSection #trackInfo #songInfo marquee{
+    width: 30%;
+    margin-top: 5px;
+}
+#mainSection #trackInfo .mediaButtons{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+    font-size: 40px;
+}
+#mainSection #trackInfo .mediaButtons i{
+    cursor: pointer;
+}
+#mainSection #trackInfo #range{
+    height: 4px;
+    accent-color:#f6f5f5;
+    cursor: pointer;
+}
+
+/* ^ FOOTER PART STARTs HERE--------------------------------------- */
+footer{
+    height: 50vh;
+    padding: 40px;
+    background-color: #262829;
+    background-color: #162d35fd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer main{
+    display: flex;
+    gap:200px;
+}
+footer main #leftPart{
+    display: flex;
+}
+footer main #leftPart div{
+    margin: 0px 60px;
+}
+footer main #leftPart div h4{
+    color:white;
+}
+footer main #leftPart div a{
+    display: block;
+    margin: 8px 0;
+    text-decoration: none;
+    color:#969494;
+}
+footer main #leftPart div a:hover{
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness:0.5px;
+    text-underline-offset: 1.8px;
+}
+footer main #rightPart{
+    display: flex;
+    justify-content: center;
+}
+footer main #rightPart a{
+    text-decoration: none;
+    color:white;
+    height: 45px;
+    width: 45px;
+    background-color: #0c4455fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+footer main #rightPart a:hover{
+    background-color: #096a87;
+}
+footer main #rightPart a i{
+    font-size: 20px;
+}
+footer hr{
+    border: 1px solid #c9c7c728;
+    margin-top: 50px;
+}
+footer h5{
+    margin-top: 10px;
+    color:#969494
+}
